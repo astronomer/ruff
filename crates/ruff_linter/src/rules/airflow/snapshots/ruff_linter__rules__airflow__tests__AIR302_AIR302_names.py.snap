@@ -1,38 +1,153 @@
 ---
 source: crates/ruff_linter/src/rules/airflow/mod.rs
+snapshot_kind: text
 ---
-AIR302_names.py:4:1: AIR302 `airflow.utils.dates.date_range` is removed in Airflow 3.0
-  |
-2 | from airflow.utils.dates import date_range, datetime_to_nano, days_ago
-3 | 
-4 | date_range
-  | ^^^^^^^^^^ AIR302
-5 | days_ago
-  |
-
-AIR302_names.py:5:1: AIR302 `airflow.utils.dates.days_ago` is removed in Airflow 3.0; use datetime.timedelta() instead
-  |
-4 | date_range
-5 | days_ago
-  | ^^^^^^^^ AIR302
-6 | 
-7 | dates.date_range
-  |
-
-AIR302_names.py:7:7: AIR302 `airflow.utils.dates.date_range` is removed in Airflow 3.0
-  |
-5 | days_ago
-6 | 
-7 | dates.date_range
-  |       ^^^^^^^^^^ AIR302
-8 | dates.days_ago
-  |
-
-AIR302_names.py:8:7: AIR302 `airflow.utils.dates.days_ago` is removed in Airflow 3.0; use datetime.timedelta() instead
+AIR302_names.py:16:1: AIR302 `airflow.utils.dates.date_range` is removed in Airflow 3.0
    |
- 7 | dates.date_range
- 8 | dates.days_ago
+16 | date_range
+   | ^^^^^^^^^^ AIR302
+17 | days_ago
+   |
+
+AIR302_names.py:17:1: AIR302 `airflow.utils.dates.days_ago` is removed in Airflow 3.0; use datetime.timedelta() instead
+   |
+16 | date_range
+17 | days_ago
+   | ^^^^^^^^ AIR302
+18 | 
+19 | dates.date_range
+   |
+
+AIR302_names.py:19:7: AIR302 `airflow.utils.dates.date_range` is removed in Airflow 3.0
+   |
+17 | days_ago
+18 | 
+19 | dates.date_range
+   |       ^^^^^^^^^^ AIR302
+20 | dates.days_ago
+   |
+
+AIR302_names.py:20:7: AIR302 `airflow.utils.dates.days_ago` is removed in Airflow 3.0; use datetime.timedelta() instead
+   |
+19 | dates.date_range
+20 | dates.days_ago
    |       ^^^^^^^^ AIR302
- 9 | 
-10 | # This one was not deprecated.
+21 | 
+22 | # This one was not deprecated.
+   |
+
+AIR302_names.py:26:1: AIR302 `airflow.triggers.external_task.TaskStateTrigger` is removed in Airflow 3.0
+   |
+24 | dates.datetime_to_nano
+25 | 
+26 | TaskStateTrigger
+   | ^^^^^^^^^^^^^^^^ AIR302
+27 | TemporaryDirectory
+28 | mkdirs
+   |
+
+AIR302_names.py:27:1: AIR302 `airflow.utils.file.TemporaryDirectory` is removed in Airflow 3.0
+   |
+26 | TaskStateTrigger
+27 | TemporaryDirectory
+   | ^^^^^^^^^^^^^^^^^^ AIR302
+28 | mkdirs
+29 | date_range
+   |
+
+AIR302_names.py:28:1: AIR302 `airflow.utils.file.mkdirs` is removed in Airflow 3.0
+   |
+26 | TaskStateTrigger
+27 | TemporaryDirectory
+28 | mkdirs
+   | ^^^^^^ AIR302
+29 | date_range
+30 | apply_defaults
+   |
+
+AIR302_names.py:29:1: AIR302 `airflow.utils.dates.date_range` is removed in Airflow 3.0
+   |
+27 | TemporaryDirectory
+28 | mkdirs
+29 | date_range
+   | ^^^^^^^^^^ AIR302
+30 | apply_defaults
+31 | parse_execution_date
+   |
+
+AIR302_names.py:30:1: AIR302 `airflow.utils.decorators.apply_defaults` is removed in Airflow 3.0
+   |
+28 | mkdirs
+29 | date_range
+30 | apply_defaults
+   | ^^^^^^^^^^^^^^ AIR302
+31 | parse_execution_date
+32 | round_time
+   |
+
+AIR302_names.py:31:1: AIR302 `airflow.utils.dates.parse_execution_date` is removed in Airflow 3.0
+   |
+29 | date_range
+30 | apply_defaults
+31 | parse_execution_date
+   | ^^^^^^^^^^^^^^^^^^^^ AIR302
+32 | round_time
+33 | scale_time_units
+   |
+
+AIR302_names.py:32:1: AIR302 `airflow.utils.dates.round_time` is removed in Airflow 3.0
+   |
+30 | apply_defaults
+31 | parse_execution_date
+32 | round_time
+   | ^^^^^^^^^^ AIR302
+33 | scale_time_units
+34 | infer_time_unit
+   |
+
+AIR302_names.py:33:1: AIR302 `airflow.utils.dates.scale_time_units` is removed in Airflow 3.0
+   |
+31 | parse_execution_date
+32 | round_time
+33 | scale_time_units
+   | ^^^^^^^^^^^^^^^^ AIR302
+34 | infer_time_unit
+35 | test_cycle
+   |
+
+AIR302_names.py:34:1: AIR302 `airflow.utils.dates.infer_time_unit` is removed in Airflow 3.0
+   |
+32 | round_time
+33 | scale_time_units
+34 | infer_time_unit
+   | ^^^^^^^^^^^^^^^ AIR302
+35 | test_cycle
+36 | SHUTDOWN
+   |
+
+AIR302_names.py:35:1: AIR302 `airflow.utils.dag_cycle_tester.test_cycle` is removed in Airflow 3.0
+   |
+33 | scale_time_units
+34 | infer_time_unit
+35 | test_cycle
+   | ^^^^^^^^^^ AIR302
+36 | SHUTDOWN
+37 | terminating_states
+   |
+
+AIR302_names.py:36:1: AIR302 `airflow.utils.state.SHUTDOWN` is removed in Airflow 3.0
+   |
+34 | infer_time_unit
+35 | test_cycle
+36 | SHUTDOWN
+   | ^^^^^^^^ AIR302
+37 | terminating_states
+   |
+
+AIR302_names.py:37:1: AIR302 `airflow.utils.state.terminating_states` is removed in Airflow 3.0
+   |
+35 | test_cycle
+36 | SHUTDOWN
+37 | terminating_states
+   | ^^^^^^^^^^^^^^^^^^ AIR302
    |

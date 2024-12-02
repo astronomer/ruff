@@ -106,6 +106,39 @@ fn removed_name(checker: &mut Checker, expr: &Expr, ranged: impl Ranged) {
                 ["airflow", "utils", "dates", "date_range"] => {
                     Some((qualname.to_string(), Replacement::None))
                 }
+                ["airflow", "triggers", "external_task", "TaskStateTrigger"] => {
+                    Some((qualname.to_string(), Replacement::None))
+                }
+                ["airflow", "utils", "file", "TemporaryDirectory"] => {
+                    Some((qualname.to_string(), Replacement::None))
+                }
+                ["airflow", "utils", "file", "mkdirs"] => {
+                    Some((qualname.to_string(), Replacement::None))
+                }
+                ["airflow", "utils", "decorators", "apply_defaults"] => {
+                    Some((qualname.to_string(), Replacement::None))
+                }
+                ["airflow", "utils", "dates", "parse_execution_date"] => {
+                    Some((qualname.to_string(), Replacement::None))
+                }
+                ["airflow", "utils", "dates", "round_time"] => {
+                    Some((qualname.to_string(), Replacement::None))
+                }
+                ["airflow", "utils", "dates", "scale_time_units"] => {
+                    Some((qualname.to_string(), Replacement::None))
+                }
+                ["airflow", "utils", "dates", "infer_time_unit"] => {
+                    Some((qualname.to_string(), Replacement::None))
+                }
+                ["airflow", "utils", "state", "SHUTDOWN"] => {
+                    Some((qualname.to_string(), Replacement::None))
+                }
+                ["airflow", "utils", "state", "terminating_states"] => {
+                    Some((qualname.to_string(), Replacement::None))
+                }
+                ["airflow", "utils", "dag_cycle_tester", "test_cycle"] => {
+                    Some((qualname.to_string(), Replacement::None))
+                }
                 ["airflow", "utils", "dates", "days_ago"] => Some((
                     qualname.to_string(),
                     Replacement::Name("datetime.timedelta()".to_string()),
